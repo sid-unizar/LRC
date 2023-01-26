@@ -6,7 +6,7 @@ This github contains the datasets, scripts and notebooks needeed to reproduce th
 - notebooks: notebooks to launch the above scripts in Google Colab, and to collect the results. 
 
 ### **Section 5.1 in the paper: Run the experiments**
-To run the experiments in Section 5.1, it is needed the scripts:
+To run the experiments in Section 5.1, following scripts are needed:
 - `script/lrc_train_evaluate.py`: to run Lexical Relation Classification experiments with templates T1-T4.
 - `script/masked_lrc_train_evaluate.py`: to run Lexical Relation Classification experiments with templates TM1-TM3.
 - `script/gradedLE_train_evaluate.py`: to run graded Lexical Entailment experiments with templates T1-T4.
@@ -48,10 +48,17 @@ Similar rationale is applied for the rest of the python scripts.
 Once the scripts are run, you get a set of results files like the ones in the `results` folder. To process these results files, it can be used the notebook `results_processing.ipynb` to collect all the results.
 
 ### **Section 5.2 in the paper: Error analysis**
-We performed an error analysis of the results over the CogALexV and EVALution datasets. For this error analysis are needed the metadata files:
+We performed an error analysis of the results over the CogALexV and EVALution datasets. For this error analysis the metadata files are needed:
 - For CogAlexV: `datasests/CogALexV/relata_metadata.txt` and `datasests/CogALexV/pairs_metadata.txt`.
 - For EVALution: `datasests/EVALution/EVALUTION_RELATA.txt` and `datasests/EVALution/EVALUTION_RELATIONS.txt`.
 
 These files contains the POS, domain, prototipically value needed to perform the error analysis. 
 
 Use the notebook `error_analysis.ipynb`.
+
+### **Section 5.3 in the paper: Embedding Projection Visualization**
+To control del learning process of the network we visualize the model embeddings by layers and epochs. The script to retrieve the processed embeddings for the visualization is `embedding_visualization.ipynb`.
+
+Inputs for the script are the desired checkpoints downloaded from `notebooks/lrc_train_evaluate_launcher.ipynb` and `notebooks/masked_lrc_train_evaluate_launcher.ipynb`. The outputs are: a `visualization_metadata.tsv` file and a `visualization_tensors.tsv` file. 
+
+Due to RAM  limitations in Google Collab, there is a limited number of examples (400) one can process a a time. 
