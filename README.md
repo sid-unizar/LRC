@@ -99,7 +99,7 @@ CogAlexV results in terms of the f1-score for all relations and the weighted f1-
 |KEML|0.492|0.547|0.652|0.292|0.500|
 |RelBert|0.794|0.616|0.702|0.505|0.664|
 
-Graded LE results over Hyperlex dataset in terms of the Spearman correlation:
+Graded LE results over Hyperlex dataset in terms of the Spearman correlation for all pairs words and restricted to noun and verb pairs:
 
 |Model|random-split|lexical-split|
 |----|---|---|
