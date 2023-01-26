@@ -12,7 +12,7 @@ To run the experiments in Section 5.1, following scripts are needed:
 - `script/gradedLE_train_evaluate.py`: to run graded Lexical Entailment experiments with templates T1-T4.
 - `script/masked_gradedLE_train_evaluate.py`: to run graded Lexical Entailment experiments with templates TM1-TM3.
 
-The scripts can be easly launched in Google Colab using the notebooks:
+The scripts can be easly launched in Google Colab using the notebooks (upload one of them to your Colab and run all cells):
 - `notebooks/lrc_train_evaluate_launcher.ipynb`
 - `notebooks/masked_lrc_train_evaluate_launcher.ipynb`
 - `notebooks/gradedLE_train_evaluate_launcher.ipynb`
