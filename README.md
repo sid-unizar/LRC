@@ -1,6 +1,6 @@
 # Lexical Relation Classification and graded Lexical Entailment
 ## "No clues, good clues: Out of context Lexical Relation Classification"
-This github contains the datasets, scripts and notebooks needeed to reproduce the results in the submitted paper: *No clues, good clues: Out of context Lexical Relation Classification*. It contains:
+This repository contains the datasets, scripts and notebooks needeed to reproduce the results in the submitted paper: *No clues, good clues: Out of context Lexical Relation Classification*. It contains:
 - datasets: all datasets used in the paper. The folder `datasets/hyperlex-orig` contains the original Hyperlex dataset. We use a modified version of this dataset (explained in Appendix A of the paper), `datasets/hyperlex`. It also contains the SoTA results in the literature (`datasets/sotas_results_literature/`) for a better visualization of the results.
 - scripts: needed scripts to run the experiments.
 - notebooks: notebooks to launch the above scripts in Google Colab, and to collect the results. 
@@ -110,7 +110,7 @@ Graded LE results over Hyperlex dataset in terms of the Spearman correlation for
 |RoBERTa/TM2|**0.749**/**0.761**/**0.646**|**0.654**/**0.705**/**0.417**|
 |RoBERTa/TM3|**0.814**/**0.830**/**0.683**|<ins>**0.794**</ins>/**0.828**/<ins>**0.656**</ins>|
 |LEAR|0.686/0.710/------|0.174/------/------ |
-|SDNS|0.692/------/------|------/------/------|
+|SDNS|0.692/------/------|0.544/------/------|
 |GLEN|0.520/------/------|0.481/------/------|
 |POSTLE|0.686/------/------|------/0.600/------|
 |LexSub|0.533/------/------|------/------/------|
