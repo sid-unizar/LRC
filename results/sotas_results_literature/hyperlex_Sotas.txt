@@ -1,0 +1,9 @@
+,hyperlex-random,hyperlex-random,hyperlex-random,hyperlex-lexical,hyperlex-lexical,hyperlex-lexical
+,logit-correlation,noun-logit-correlation,verb-logit-correlation,logit-correlation,noun-logit-correlation,verb-logit-correlation
+model,,,,,,
+LEAR,0.686,0.71,na,0.174,na,na
+SDNS,0.692,na,na,0.544,na,na
+GLEN,0.52,na,na,0.481,na,na
+POSTLE,0.686,na,na,na,0.60,na
+LexSub,0.533,na,na,na,na,na
+HF,0.69,na,na,na,na,na
