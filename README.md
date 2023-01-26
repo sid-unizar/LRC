@@ -62,3 +62,56 @@ To control del learning process of the network we visualize the model embeddings
 Inputs for the script are the desired checkpoints downloaded from `notebooks/lrc_train_evaluate_launcher.ipynb` and `notebooks/masked_lrc_train_evaluate_launcher.ipynb`. The outputs are: a `visualization_metadata.tsv` file and a `visualization_tensors.tsv` file. 
 
 Due to RAM  limitations in Google Collab, there is a limited number of examples (400) one can process a a time. 
+
+## **Summary of the results**
+
+We report the results for RoBERTa large model trained with the different templates in the paper.
+
+K&+N, BLESS, EVALution and ROOT9 results in terms of the weighted f1-score weighted by the support of the labels
+ 
+|Model|K&+N|BLESS|EVALution|ROOT9|
+|---|---|---|---|---|
+|RoBERTa/T1|0.989|**0.954**|**0.764**|**0.936**
+|RoBERTa/T2|0.989|**0.955**|**0.757**|**0.936**
+|RoBERTa/T3|0.989|<ins>**0.956**</ins>|<ins>**0.771**</ins>|<ins>**0.937**</ins>
+|RoBERTa/T4|0.312|0.133|0.087|**0.934**
+|RoBERTa/TM1|0.988|0.947|**0.761**|**0.936**
+|RoBERTa/TM2|0.988|0.946|**0.764**|**0.928**
+|RoBERTa/TM3|0.985|**0.951**|**0.746**|**0.926**
+|LexNET|0.985|0.893|0.600|0.813
+|KEML|<ins>**0.993**</ins>|0.944|0.660|0.878
+|SphereRE|0.990|0.938|0.620|0.861
+|RelBERT|0.949|0.921|0.701|0.910
+
+CogAlexV results in terms of the f1-score for all relations and the weighted f1-score by the support of the labels
+
+|Model|ant|hyp|part|syn|all|
+|--|--|--|--|--|--|
+|RoBERTa/T1|**0.873**|**0.703**|**0.752**|**0.604**|**0.743**|
+|RoBERTa/T2|**0.863**|**0.682**|**0.745**|0.584|**0.728**|
+|RoBERTa/T3|<ins>**0.884**</ins>|**0.718**|**0.784**|<ins>**0.629**</ins>|<ins>**0.762**</ins>|
+|RoBERTa/T4|0.237|0.004|0.165|0.085|0.119|
+|RoBERTa/TM1|**0.880**|**0.709**|**0.773**|**0.599**|**0.750**|
+|RoBERTa/TM2|**0.871**|<ins>**0.723**</ins>|<ins>**0.787**</ins>|**0.621**|**0.758**|
+|RoBERTa/TM3|**0.871**|**0.718**|**0.787**|**0.616**|**0.756**|
+|LexNET|0.425|0.526|0.493|0.297|0.445|
+|SphereRE|0.479|0.538|0.539|0.286|0.471|
+|KEML|0.492|0.547|0.652|0.292|0.500|
+|RelBert|0.794|0.616|0.702|0.505|0.664|
+
+Graded LE results over Hyperlex dataset in terms of the Spearman correlation:
+
+|Model|random-split|lexical-split|
+|----|---|---|
+|RoBERTa/T1|**0.741**/**0.753**/**0.584**|**0.755**/**0.788**/**0.532** |
+|RoBERTa/T2|0.152/0.170/0.030|0.287/0.350/0.063|
+|RoBERTa/T3|0.774/0.790/0.631|**0.669**/**0.690**/**0.516**|
+|RoBERTa/TM1|<ins>**0.828**</ins>/<ins>**0.839**</ins>/<ins>**0.716**</ins>|**0.789**/<ins>**0.837**</ins>/**0.612**|
+|RoBERTa/TM2|**0.749**/**0.761**/**0.646**|**0.654**/**0.705**/**0.417**|
+|RoBERTa/TM3|**0.814**/**0.830**/**0.683**|<ins>**0.794**</ins>/**0.828**/<ins>**0.656**</ins>|
+|LEAR|0.686/0.710/------|0.174/------/------ |
+|SDNS|0.692/------/------|------/------/------|
+|GLEN|0.520/------/------|0.481/------/------|
+|POSTLE|0.686/------/------|------/0.600/------|
+|LexSub|0.533/------/------|------/------/------|
+|HF|0.690/------/------|------/------/----- |
