@@ -1,7 +1,0 @@
-,K&H+N,K&H+N,K&H+N,BLESS,BLESS,BLESS,EVALution,EVALution,EVALution,ROOT09,ROOT09,ROOT09
-,precision,recall,f1-score,precision,recall,f1-score,precision,recall,f1-score,precision,recall,f1-score
-model,,,,,,,,,,,,
-LexNET,0.985,0.986,0.985,0.894,0.893,0.893,0.601,0.607,0.6,0.813,0.814,0.813
-KEML,0.993,0.993,0.993,0.944,0.943,0.944,0.663,0.660,0.660,0.878,0.877,0.878
-SphereRE,0.990,0.989,0.990,0.938,0.938,0.938,0.62,0.621,0.62,0.860,0.862,0.861
-RelBERT,,,0.949,,,0.921,,,0.701,,,0.910

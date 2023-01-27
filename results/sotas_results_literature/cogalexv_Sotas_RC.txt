@@ -1,7 +1,0 @@
-,syn,ant,hyper,part_of,all
-,f1-score,f1-score,f1-score,f1-score,weighted f1-score
-model,,,,,
-LexNET,0.297,0.425,0.526,0.493,0.445
-SphereRE,0.286,0.479,0.538,0.539,0.471
-KEML,0.292,0.492,0.547,0.652,0.500
-RelBert,0.505,0.794,0.616,0.702,0.664
