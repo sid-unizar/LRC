@@ -45,9 +45,9 @@ The script produces two results files:
 The `masked_lrc_train_evaluate.py` script is used in a similar way removing the `test-templates` parameter. It also produces two files, adding the one token verbalization for the relation (predicted and real) and the top $2K$ tokens with the highest probabilities to fill the mask token.
 
 The ''graded'' versions of the scripts, `gradedLE_train_evaluate.py` and `masked_gradedLE_train_evaluate.py`, follow a similar rationale than the regarding non-graded versions, with the following differences:
-- the csv output files contains the human grades (instead of the predicted and real classification) and the produced logits by the model.
-- the txt output files contains the Spearman correlations.
-- it produced a `.val` file with the logits and probabilities of each relation label in the validation dataset.
+- the csv output files contains the human grades (instead of the predicted and real classification) and it is also added the produced logits by the model;
+- the txt output files contains the Spearman correlations and the regression coefficients of the needed linear regresion to calculate the hyponym grade;
+- it also produces a `.val` file with the logits and probabilities of each relation label for the pairs in the validation dataset.
 
 ### **Section 5.1 in the paper: Collect the results of the experiments**
 Once the scripts are run, you get a set of results files like the ones in the `results` folder (due to space limitations of anonymous github, our results can be downloaded running the `results_processing.ypnb` notebook). To process these results files, it can be used the notebook `results_processing.ipynb` to collect all the results.
