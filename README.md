@@ -20,7 +20,7 @@ The scripts can be easly launched in Google Colab using the notebooks (upload on
 
 Usage examples of the scripts can be consulted in the regarding notebooks.
 
-The `lrc_train_evaluate.py` is used to train a pretrained language model for LRC with templates T1-T4. It is used a train/val dataset during training and a test dataset to predict the lexical relation among two words. An usage example with EVALution datset and templates T1 (train and test templates `' <W1> ' <SEP> ' <W2> '`):
+The `lrc_train_evaluate.py` script is used to train a pretrained language model for LRC with templates T1-T4. It is used a train/val dataset during training and a test dataset to predict the lexical relation among two words. An usage example with EVALution datset and templates T1 (train and test templates `' <W1> ' <SEP> ' <W2> '`):
 ```
 $python /content/drive/MyDrive/scripts/lrc_train_evaluate.py \
 	--train_templates "' <W1> ' <SEP> ' <W2> '"   \
@@ -39,10 +39,15 @@ $python /content/drive/MyDrive/scripts/lrc_train_evaluate.py \
 ```
 In the above example, it is observed some of the hyperparameters used in our experiments (batch size, epoch, warm up). The rest of hyperparameters are contained in the script.
 The script produces two results files:
-- A csv file: it contains one line for each pair of words (source and target words) and the relation to predict in the test dataset. Each line is formed by: the predicted/real label relation id (number from $0$ to $K$) and the label relation name; tokenization of the source/target words and number of tokens; probability of each label; number of synsets of the source/target words; the entropy of the probability distribution of the labels. 
+- A csv file: it contains one line for each pair of words (source and target words) and the relation to predict in the test dataset. Each line is formed by: the predicted/real label relation id (number from $0$ to $K-1$, where $K$ is the number of the relations in the dataset) and the label relation name; tokenization of the source/target words and number of tokens; probability of each label; number of synsets of the source/target words; the entropy of the probability distribution of the labels. 
 - A txt file: the file contains $3$ lines. The first line is the printed version of a python dictionary with the value of all script parameters; the second line is the initial run date; and the thrid, the printed classification report of the function `classification_report` in the `sklearn` package.
 
-Similar rationale is applied for the rest of the python scripts.
+The `masked_lrc_train_evaluate.py` script is used in a similar way removing the `test-templates` parameter. It also produces two files, adding the one token verbalization for the relation (predicted and real) and the top $2K$ tokens with the highest probabilities to fill the mask token.
+
+The ''graded'' versions of the scripts, `gradedLE_train_evaluate.py` and `masked_gradedLE_train_evaluate.py`, follow a similar rationale than the regarding non-graded versions, with the following differences:
+- the csv output files contains the human grades (instead of the predicted and real classification) and the produced logits by the model.
+- the txt output files contains the Spearman correlations.
+- it produced a `.val` file with the logits and probabilities of each relation label in the validation dataset.
 
 ### **Section 5.1 in the paper: Collect the results of the experiments**
 Once the scripts are run, you get a set of results files like the ones in the `results` folder (due to space limitations of anonymous github, our results can be downloaded running the `results_processing.ypnb` notebook). To process these results files, it can be used the notebook `results_processing.ipynb` to collect all the results.
