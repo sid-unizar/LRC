@@ -20,7 +20,7 @@ The scripts can be easly launched in Google Colab using the notebooks (upload on
 
 Usage examples of the scripts can be consulted in the regarding notebooks.
 
-The `lrc_train_evaluate.py` script is used to train a pretrained language model for LRC with templates T1-T4. It is used a train/val dataset during training and a test dataset to predict the lexical relation among two words. An usage example with EVALution datset and templates T1 (train and test templates `' <W1> ' <SEP> ' <W2> '`):
+The `lrc_train_evaluate.py` script is used to train a pretrained language model for LRC with templates T1-T4. It is used a train/val dataset during training and a test dataset to predict the lexical relation among two words. An usage example with EVALution dataset and templates T1 (train and test templates `' <W1> ' <SEP> ' <W2> '`):
 ```
 $python /content/drive/MyDrive/scripts/lrc_train_evaluate.py \
 	--train_templates "' <W1> ' <SEP> ' <W2> '"   \
