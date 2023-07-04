@@ -1,6 +1,6 @@
 # Lexical Relation Classification and graded Lexical Entailment
 ## "No clues, good clues: Out of context Lexical Relation Classification"
-This repository contains the datasets, scripts and notebooks needeed to reproduce the results in the submitted paper: *No clues, good clues: Out of context Lexical Relation Classification*. It contains:
+This repository contains the datasets, scripts and notebooks needeed to reproduce the results in the paper: *No clues, good clues: Out of context Lexical Relation Classification*. It contains:
 - datasets: all datasets used in the paper. The folder `datasets/hyperlex-orig` contains the original Hyperlex dataset. We use a modified version of this dataset (explained in Appendix A of the paper), `datasets/hyperlex`. It also contains the SoTA results in the literature (`datasets/sotas_results_literature/`) for a better visualization of the results.
 - scripts: needed scripts to run the experiments.
 - notebooks: notebooks to launch the above scripts in Google Colab, and to collect the results. 
