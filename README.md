@@ -122,7 +122,7 @@ Graded LE results over Hyperlex dataset in terms of the Spearman correlation for
 |HF|0.690/------/------|------/------/----- |
  
  ## **Citation**
-Please cite the paper
+To cite the paper
 ```
  @inproceedings{pitarch-etal-2023-clues,
     title = "No clues good clues: out of context Lexical Relation Classification",
