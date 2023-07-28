@@ -50,7 +50,7 @@ The ''graded'' versions of the scripts, `gradedLE_train_evaluate.py` and `masked
 - it also produces a `.val` file with the logits and probabilities of each relation label for the pairs in the validation dataset.
 
 ### **Section 5.1 in the paper: Collect the results of the experiments**
-Once the scripts are run, you get a set of results files like the ones in the `results` folder (due to space limitations of anonymous github, our results can be downloaded running the `results_processing.ypnb` notebook). To process these results files, it can be used the notebook `results_processing.ipynb` to collect all the results.
+Once the scripts are run, you get a set of results files like the ones in the `results` folder (due to space limitations, our results can be downloaded running the `results_processing.ypnb` notebook). To process these results files, it can be used the notebook `results_processing.ipynb` to collect all the results.
 
 ### **Section 5.2 in the paper: Error analysis**
 We performed an error analysis of the results over the CogALexV and EVALution datasets. For this error analysis the metadata files are needed:
