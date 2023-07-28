@@ -1,6 +1,6 @@
 # Lexical Relation Classification and graded Lexical Entailment
 ## "No clues, good clues: Out of context Lexical Relation Classification"
-This repository contains the datasets, scripts and notebooks needeed to reproduce the results in the paper: *No clues, good clues: Out of context Lexical Relation Classification*. It contains:
+This repository contains the datasets, scripts and notebooks needeed to reproduce the results in the paper: [*No clues, good clues: Out of context Lexical Relation Classification*](https://aclanthology.org/2023.acl-long.308). It contains:
 - datasets: all datasets used in the paper. The folder `datasets/hyperlex-orig` contains the original Hyperlex dataset. We use a modified version of this dataset (explained in Appendix A of the paper), `datasets/hyperlex`. It also contains the SoTA results in the literature (`datasets/sotas_results_literature/`) for a better visualization of the results.
 - scripts: needed scripts to run the experiments.
 - notebooks: notebooks to launch the above scripts in Google Colab, and to collect the results. 
@@ -120,3 +120,24 @@ Graded LE results over Hyperlex dataset in terms of the Spearman correlation for
 |POSTLE|0.686/------/------|------/0.600/------|
 |LexSub|0.533/------/------|------/------/------|
 |HF|0.690/------/------|------/------/----- |
+ 
+ ## **Citation**
+Please cite the paper
+```
+ @inproceedings{pitarch-etal-2023-clues,
+    title = "No clues good clues: out of context Lexical Relation Classification",
+    author = "Pitarch, Lucia  and
+      Bernad, Jordi  and
+      Dranca, Lacramioara  and
+      Bobed Lisbona, Carlos  and
+      Gracia, Jorge",
+    booktitle = "Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+    month = jul,
+    year = "2023",
+    address = "Toronto, Canada",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2023.acl-long.308",
+    pages = "5607--5625",
+}
+```
+
