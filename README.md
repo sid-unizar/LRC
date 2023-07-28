@@ -1,16 +1,16 @@
 # Lexical Relation Classification and graded Lexical Entailment
 ## "No clues, good clues: Out of context Lexical Relation Classification"
 This repository contains the datasets, scripts and notebooks needeed to reproduce the results in the paper: [*No clues, good clues: Out of context Lexical Relation Classification*](https://aclanthology.org/2023.acl-long.308). It contains:
-- datasets: all datasets used in the paper. The folder `datasets/hyperlex-orig` contains the original Hyperlex dataset. We use a modified version of this dataset (explained in Appendix A of the paper), `datasets/hyperlex`. It also contains the SoTA results in the literature (`datasets/sotas_results_literature/`) for a better visualization of the results.
+- datasets: all datasets used in the paper. The folder `datasets/hyperlex-original` contains the original Hyperlex dataset. We use a modified version of this dataset (explained in Appendix A of the paper), `datasets/hyperlex`. It also contains the SoTA results in the literature (`datasets/sotas_results_literature/`) for a better visualization of the results.
 - scripts: needed scripts to run the experiments.
 - notebooks: notebooks to launch the above scripts in Google Colab, and to collect the results. 
 
 ### **Section 5.1 in the paper: Run the experiments**
 To run the experiments in Section 5.1, following scripts are needed:
-- `script/lrc_train_evaluate.py`: to run Lexical Relation Classification experiments with templates T1-T4.
-- `script/masked_lrc_train_evaluate.py`: to run Lexical Relation Classification experiments with templates TM1-TM3.
-- `script/gradedLE_train_evaluate.py`: to run graded Lexical Entailment experiments with templates T1-T4.
-- `script/masked_gradedLE_train_evaluate.py`: to run graded Lexical Entailment experiments with templates TM1-TM3.
+- `scripts/lrc_train_evaluate.py`: to run Lexical Relation Classification experiments with templates T1-T4.
+- `scripts/masked_lrc_train_evaluate.py`: to run Lexical Relation Classification experiments with templates TM1-TM3.
+- `scripts/gradedLE_train_evaluate.py`: to run graded Lexical Entailment experiments with templates T1-T4.
+- `scripts/masked_gradedLE_train_evaluate.py`: to run graded Lexical Entailment experiments with templates TM1-TM3.
 
 The scripts can be easly launched in Google Colab using the notebooks (upload one of them to your Colab and run all cells):
 - `notebooks/lrc_train_evaluate_launcher.ipynb`
